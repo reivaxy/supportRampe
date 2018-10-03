@@ -1,4 +1,4 @@
-# supportRampe
+# Aquarium light bracket
 
 This is a replacement for a big and clumsy bracket to hold an aquarium lamp. It is designed to not touch the water so that no salt deposit will occur due to capillarity.
 
