@@ -3,7 +3,6 @@ glass = 6;
 tolerance = 0.6;
 innerY = glass + tolerance;
 wall = 3.5;
-x = 80;
 pillarY = 11;
 innerZ = 20;
 pillarDiam = 8.8;
@@ -13,7 +12,7 @@ y = innerY + 2*wall + pillarY + pillarDiam;
 z = innerZ + pillarZ + wall;
 
 
-supportRampe(110);
+supportRampe(150);
 //translate([0, 100, 0])
 //  supportRampe(80);
 
