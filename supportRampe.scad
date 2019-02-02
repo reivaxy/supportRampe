@@ -12,10 +12,13 @@ pillarZ = 20;
 y = innerY + 2*wall + pillarY + pillarDiam;
 z = innerZ + pillarZ + wall;
 
-supportRampe();
+
+supportRampe(110);
+//translate([0, 100, 0])
+//  supportRampe(80);
 
 
-module supportRampe() {
+module supportRampe(x) {
   difference() {
     cube([x, y, z]);
     translate([-1, y - innerY - wall, 0])
@@ -28,11 +31,13 @@ module supportRampe() {
     zDiam = pillarZ * 2;
 
     // left horizontal cylindrical cut out
-    translate([0, 49, zDiam + wall])
-      YCylinder(xDiam, 50, zDiam);
+    color("red")
+      translate([0, 49, zDiam + wall])
+        YCylinder(xDiam, 50, zDiam);
     // right horizontal cylindrical cut out
-    translate([x, 49, zDiam + wall])
-      YCylinder(xDiam, 50, zDiam);
+    color("yellow")
+      translate([x, 49, zDiam + wall])
+        YCylinder(xDiam, 50, zDiam);
 
     // left vertical cylindrical cut out
     translate([0, 0, 0])
@@ -56,7 +61,7 @@ module supportRampe() {
 module XCylinder(x, y, z) {
   rotate(90, [0, 1, 0])
     scale([1, y/z, 1])
-      cylinder(d=x, h=x, $fn=100);
+      cylinder(d=80, h=x, $fn=100);
 }
 // Ellipsoid on y axis
 module YCylinder(x, y, z) {
